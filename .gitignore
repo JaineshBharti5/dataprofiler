@@ -1,3 +1,10 @@
+﻿test_env/
+verify_env/
 __pycache__/
-*.pyc
 .pytest_cache/
+build/
+dist/
+*.egg-info/
+*.csv
+*.json
+profiler_v0.1_backup.py

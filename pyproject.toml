@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sketch-profiler"
+version = "0.2.0"
+description = "Lightweight streaming data profiler using HyperLogLog and Count-Min Sketch"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Jainesh Bharti"}]
+
+[tool.setuptools]
+packages = ["dataprofiler"]

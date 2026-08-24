@@ -38,3 +38,40 @@ def test_dataprofiler_nulls():
         profiler.update(value)
     assert profiler.total_count == 10
     assert profiler.null_count == 2
+def test_from_csv():
+    with open("test_data.csv", "w", encoding="utf-8") as f:
+        f.write("product,city\n")
+        f.write("Laptop,Delhi\n")
+        f.write("Phone,Mumbai\n")
+        f.write("Laptop,Delhi\n")
+        f.write(",Chennai\n")
+
+    profiler = DataProfiler.from_csv("test_data.csv", "product")
+
+    assert profiler.total_count == 4
+    assert profiler.null_count == 1
+
+
+def test_profile_csv():
+    profilers = DataProfiler.profile_csv("test_data.csv")
+
+    assert "product" in profilers
+    assert "city" in profilers
+    assert profilers["product"].total_count == 4
+    assert profilers["city"].total_count == 4
+
+
+def test_json_report():
+    profiler = DataProfiler()
+    profiler.update("a")
+    profiler.update("b")
+    profiler.update("a")
+
+    profiler.to_json("test_report.json")
+
+    import json
+    with open("test_report.json", encoding="utf-8") as f:
+        data = json.load(f)
+
+    assert data["total_rows"] == 3
+    assert data["null_percent"] == 0.0
