@@ -1,10 +1,35 @@
-﻿test_env/
-verify_env/
+﻿# Python
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
 .pytest_cache/
+.coverage
+htmlcov/
+
+# Build
 build/
 dist/
 *.egg-info/
-*.csv
-*.json
-profiler_v0.1_backup.py
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated reports
+report.json
+
+# Local test data
+test_data.csv
+test.jsonl
+rules.json

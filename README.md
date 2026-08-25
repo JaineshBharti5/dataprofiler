@@ -1,36 +1,30 @@
-# DataProfiler
+# Sketch Profiler
 
-Lightweight, framework-agnostic streaming data profiler that estimates dataset statistics without loading the whole dataset into memory.
+A lightweight streaming data profiling toolkit built in Python.
 
 ## Features
 
-- HyperLogLog for unique-value estimation
-- Count-Min Sketch for frequency estimation
-- Null and empty-value tracking
-- CSV profiling
-- Multiple-column profiling
-- JSON reports
-- Large dataset processing
-- No pandas or Spark required
+- Streaming data profiling
+- Null and missing-value detection
+- Automatic type detection
+- HyperLogLog cardinality estimation
+- Count-Min Sketch frequency estimation
+- Numeric statistics
+- KLL approximate quantiles
+- Top-K frequent values
+- Streaming histograms
+- Data-quality metrics
+- Anomaly detection
+- Validation rules
+- Dataset health score
+- CSV support
+- JSONL support
+- Parquet support
+- Command-line interface
 
-## How it works
+## Installation
 
-**HyperLogLog** estimates the number of unique values using probabilistic counting with constant memory.
+Build the package:
 
-**Count-Min Sketch** estimates how frequently values appear without storing every value.
-
-Both are combined behind a single `DataProfiler` class.
-
-## Basic Usage
-
-```python
-from dataprofiler import DataProfiler
-
-profiler = DataProfiler()
-
-data = ["a", "b", "a", None, "c", "a", "", "b", "d", "a"]
-
-for value in data:
-    profiler.update(value)
-
-profiler.report()
+```bash
+python -m build

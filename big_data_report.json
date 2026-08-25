@@ -1,0 +1,17 @@
+{
+    "user_id": {
+        "total_rows": 1000000,
+        "null_percent": 0.0,
+        "unique_estimate": 201883
+    },
+    "product": {
+        "total_rows": 1000000,
+        "null_percent": 0.0,
+        "unique_estimate": 4
+    },
+    "city": {
+        "total_rows": 1000000,
+        "null_percent": 0.0,
+        "unique_estimate": 4
+    }
+}

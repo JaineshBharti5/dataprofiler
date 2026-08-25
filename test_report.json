@@ -1,0 +1,37 @@
+{
+    "total_rows": 3,
+    "null_count": 0,
+    "null_percent": 0.0,
+    "unique_estimate": 2,
+    "numeric_count": 0,
+    "numeric": null,
+    "quantiles": null,
+    "top_k": {
+        "k": 10,
+        "top": [
+            {
+                "value": "a",
+                "count": 2
+            },
+            {
+                "value": "b",
+                "count": 1
+            }
+        ]
+    },
+    "histogram": null,
+    "type": "string",
+    "type_counts": {
+        "string": 3
+    },
+    "quality": {
+        "rows": 3,
+        "null_count": 0,
+        "null_percent": 0.0,
+        "completeness_percent": 100.0,
+        "unique_estimate": 2,
+        "uniqueness_percent": 66.67,
+        "duplicate_percent": 33.33
+    },
+    "anomaly": null
+}

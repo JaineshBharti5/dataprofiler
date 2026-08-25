@@ -10,5 +10,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 authors = [{name = "Jainesh Bharti"}]
 
+[project.scripts]
+dataprofiler = "dataprofiler.cli:main"
+
 [tool.setuptools]
 packages = ["dataprofiler"]
