@@ -33,3 +33,5 @@ report.json
 test_data.csv
 test.jsonl
 rules.json
+
+.venv-pypi-test/
